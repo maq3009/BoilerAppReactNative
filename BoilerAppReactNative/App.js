@@ -1,22 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Image, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs '
-import { Inventory } from './screens/Expenses';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Inventory } from './screens/Inventory';
 import { Add } from './screens/Add';
-import { Settings } from 'react-native';
-
+import { Settings } from './screens/Settings';
+import { Mytheme } from './theme/index'
 
 const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={Mytheme}>
       <StatusBar style="light" />
       <Tab.Navigator>
-        <Tab.Screen name= 'Inventory' component={ Inventory } />
-        <Tab.Screen name= 'Add' component={ Add } />
-        <Tab.Screen name= 'Settings' component={ Settings } />
+        <Tab.Screen name='Inventory' component={ Inventory } />
+        <Tab.Screen name='Add' component={ Add } />
+        <Tab.Screen name='Settings' component={ Settings } />
       </Tab.Navigator>
     </NavigationContainer>
   );

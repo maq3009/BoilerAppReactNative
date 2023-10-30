@@ -1,4 +1,4 @@
-export { Inventory } from './Inventory';
-export { Add } from './Add';
-export { Settings } from './Settings';
-export { HomeScreen } from './HomeScreen';
+export { Inventory } from './screens/Inventory';
+export { Add } from './screens/Add';
+export { Settings } from './screens/Settings';
+export { HomeScreen } from './screens/HomeScreen';

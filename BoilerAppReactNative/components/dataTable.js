@@ -1,8 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import { DataTable } from 'react-native-paper';
 
-export const Inventory = () => {
-  const [page, setPage] = React.useState(0);
+const MyComponent = () => {
+  const [page, setPage] = React.useState<number>(0);
   const [numberOfItemsPerPageList] = React.useState([2, 3, 4]);
   const [itemsPerPage, onItemsPerPageChange] = React.useState(
     numberOfItemsPerPageList[0]
@@ -72,3 +72,5 @@ export const Inventory = () => {
     </DataTable>
   );
 };
+
+export default MyComponent;

@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Image, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { HomeScreen } from './screens/HomeScreen';
 import { Login_SignUp } from './screens/Login_SignUp';
 import { Inventory } from './screens/Inventory';
 import { Add } from './screens/Add';
@@ -20,21 +21,55 @@ export default function App() {
     <NavigationContainer theme={theme === 'dark' ? DarkTheme : DefaultTheme}>
       <StatusBar style="light" />
       <Tab.Navigator>
+        <Tab.Screen name= 'Boiler Inventory App' component={ HomeScreen }
+          options={{
+            headerTitleAlign: 'center',
+            headerStyle: {
+              backgroundColor: '#304b4d'
+            },
+            tabBarStyle: {
+              backgroundColor: '#304b4d',
+            },
+          }} />
         <Tab.Screen name= 'Login/SignUp' component={ Login_SignUp }
           options={{
             headerTitleAlign: 'center',
+            headerStyle: {
+              backgroundColor: '#304b4d'
+            },
+            tabBarStyle: {
+              backgroundColor: '#304b4d',
+            },
           }} />
         <Tab.Screen name= 'Inventory' component={ Inventory }
           options={{
             headerTitleAlign: 'center',
+            headerStyle: {
+              backgroundColor: '#304b4d'
+            },
+            tabBarStyle: {
+              backgroundColor: '#304b4d',
+            },
           }} />
         <Tab.Screen name= 'Add Part' component={ Add }
           options={{
             headerTitleAlign: 'center',
+            headerStyle: {
+              backgroundColor: '#304b4d'
+            },
+            tabBarStyle: {
+              backgroundColor: '#304b4d',
+            },
           }} />
         <Tab.Screen name= 'Settings' component={ Settings }
           options={{
             headerTitleAlign: 'center',
+            headerStyle: {
+              backgroundColor: '#304b4d'
+            },
+            tabBarStyle: {
+              backgroundColor: '#304b4d',
+            },
           }} />
       </Tab.Navigator>
     </NavigationContainer>

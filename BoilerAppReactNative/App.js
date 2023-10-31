@@ -12,7 +12,6 @@ import { DarkTheme, DefaultTheme } from '@react-navigation/native'
 
 const Tab = createBottomTabNavigator();
 
-
 export default function App() {
   const theme = useColorScheme();
 
@@ -21,7 +20,7 @@ export default function App() {
     <NavigationContainer theme={theme === 'dark' ? DarkTheme : DefaultTheme}>
       <StatusBar style="light" />
       <Tab.Navigator>
-        <Tab.Screen name= 'Boiler Inventory App' component={ HomeScreen }
+        <Tab.Screen name= 'Home Screen' component={ HomeScreen }
           options={{
             headerTitleAlign: 'center',
             headerStyle: {
@@ -93,3 +92,7 @@ const styles = StyleSheet.create({
   }
 
 });
+
+
+//01 - Building an Expense Trackig App with React Native (Expo)//
+//timestamp - 51:58
